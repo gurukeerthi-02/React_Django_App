@@ -1,8 +1,11 @@
 import axios from "axios";
 import { ACCESS_TOKEN } from "./constants";
 
+
+const apiUrl = "/choreo-apis/reactdjangoapp/backend/v1"
+
 const api = axios.create({
-    baseURL: import.meta.env.VITE_API_URL // access the url from .env file
+    baseURL: import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL: apiUrl // access the url from .env file
 })
 
 // add the token to the request accepted everytime using api and axios
