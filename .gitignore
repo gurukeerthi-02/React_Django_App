@@ -1,2 +1,1 @@
-# In root .gitignore
-*.env
+env/
