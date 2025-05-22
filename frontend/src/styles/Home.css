@@ -1,0 +1,115 @@
+/* Global font */
+div {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Notes section */
+.notes-section {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.notes-section h2 {
+  color: #2c3e50;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* Note card with flip animation */
+.notes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 90px;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.note {
+  flex: 0 0 auto;                 /* Prevent shrinking, allow natural width */
+  perspective: 1000px;
+  width: 300px;                   /* Fixed width for consistency */
+  height: 200px;                  /* Fixed height for layout alignment */
+}
+
+.note:hover .note-container {
+  transform: rotateY(180deg);
+}
+
+/* Content inside note (front side) */
+.note-title,
+.note-content,
+.note-date {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #333;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+/* Form section */
+form {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 520px;
+  margin: 40px auto;
+  transition: all 0.3s ease;
+}
+
+form h2 {
+  color: #2c3e50;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #444;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+form input[type="submit"] {
+  background-color: #6366f1;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: #4f46e5;
+}
